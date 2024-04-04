@@ -1,0 +1,10 @@
+base = []
+for _ in range(int(input())):
+    k = input()
+    base.append(k)
+keys = []
+for l in range(int(input())):
+    k = input()
+    keys.append(k)
+result = [request for request in base if all(key.lower() in request.lower() for key in keys)]
+print(*result, sep='\n')
